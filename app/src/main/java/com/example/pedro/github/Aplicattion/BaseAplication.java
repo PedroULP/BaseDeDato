@@ -42,6 +42,6 @@ public class BaseAplication extends Application{
             }   while (c.moveToNext());
         }
 
-        return  lista;
+        return lista;
     }
 }
