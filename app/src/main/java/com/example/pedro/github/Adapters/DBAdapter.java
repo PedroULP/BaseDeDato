@@ -68,18 +68,17 @@ public class DBAdapter {
 
 
         @Override
-        public void onCreate(SQLiteDatabase sqLiteDatabase) {
-            sqlDB.execSQL(ClienteAdapter.CR_TABLE);
-            sqlDB.execSQL(ProyectoAdapter.CR_TABLE);
+        public void onCreate(SQLiteDatabase db) {
+            db.execSQL(ClienteAdapter.CR_TABLE);
+            db.execSQL(ProyectoAdapter.CR_TABLE);
         }
 
         @Override
-        public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) {
-            sqlDB.execSQL("drop table ifexists " + ProyectoAdapter.CR_TABLE);
-            sqlDB.execSQL("drop table ifexists " + ClienteAdapter.CR_TABLE);
+        public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
+            db.execSQL("drop table if exists " + ProyectoAdapter.CR_TABLE);
+            db.execSQL("drop table if exists " + ClienteAdapter.CR_TABLE);
 
             onCreate(db);
         }
-    }
     }
 }
