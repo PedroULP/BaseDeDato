@@ -21,7 +21,7 @@ public class DBAdapter {
     }
 
      //Abre la conexión con la base de datos.
-    public void pen() {
+    public void open() {
         sqlDB = dbHelper.getWritableDatabase();
 
         cliente = new ClienteAdapter(sqlDB);
