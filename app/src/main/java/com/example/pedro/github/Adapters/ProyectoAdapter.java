@@ -24,8 +24,12 @@ public class ProyectoAdapter {
 
     private final static String[] COLUMNS = {Columns.ID,Columns.DESCRIPCION,Columns.COSTO,Columns.CLIENTE_ID};
 
-    public final static String CR_TABLE = "create table if not exists" + NAME + "(" + Columns.ID + "integerprimarykeyautoincrement, "
-            + Columns.DESCRIPCION + " textnotnull, " + Columns.COSTO + " real, " + Columns.CLIENTE_ID + " integer, FOREING KEY(cliente_id) REFERENCES cliente(cliente_id))";
+    public final static String CR_TABLE = "create table if not exists"
+            + NAME + "(" + Columns.ID
+            + "integerprimarykeyautoincrement, "
+            + Columns.DESCRIPCION + " textnotnull, "
+            + Columns.COSTO + " real, "
+            + Columns.CLIENTE_ID + " integer, FOREING KEY(cliente_id) REFERENCES cliente(cliente_id))";
 
 
     public boolean insert (String descripcion, double costo, int cliente_id){
