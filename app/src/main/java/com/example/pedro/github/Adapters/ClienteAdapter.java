@@ -28,9 +28,9 @@ public class ClienteAdapter {
             Columns.ID,Columns.NOMBRE,Columns.APELLIDO,Columns.TELEFONO};
 
 
-    public final static String CR_TABLE="create table ifnoexists"
+    public final static String CR_TABLE="create table if not exists"
             + NAME + "(" + Columns.ID + "integerprimarykeyautoincrement, "
-            + Columns.NOMBRE + "textonull, " + Columns.APELLIDO + "textonull, "
+            + Columns.NOMBRE + "textonull, " + Columns.APELLIDO + "textnonull, "
             + Columns.TELEFONO + " text)";
 
 
